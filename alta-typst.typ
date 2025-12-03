@@ -10,32 +10,15 @@
 #let icon(name, shift: 1.5pt) = context {
   let body = box(
     baseline: shift,
-    height: 10pt,
-    image("icons/" + name + ".svg"),
+    height: 8pt,
+    image("icons/" + name + ".svg")
   )
-  if target() == "paged" {
-    body
-    h(3pt)
-  } else {
-    html.frame(body)
-  }
-}
-
-#let name(name) = context {
-  if target() == "paged" {
-    emph(name)
-    [\ ]
-  } else {
-    html.div(
-      class: "name",
-      emph(name),
-    )
-  }
+  h(2pt)
 }
 
 #let findMe(services) = {
   set text(8pt)
-  let icon = icon.with(shift: 2.5pt)
+  let icon = icon.with(shift: 2pt)
 
   services
     .map(service => {
@@ -46,8 +29,7 @@
       } else {
         link(service.link)
       }
-    })
-    .join(h(10pt))
+    }).join(h(9pt))
   [
 
   ]
@@ -151,7 +133,7 @@
   )
   set text(9.7pt, font: "IBM Plex Sans")
   set page(
-    margin: (x: 54pt, y: 52pt),
+    margin: (x: 54pt, y: 50pt),
   )
 
   let body = {
@@ -211,3 +193,16 @@
     html.div(body)
   }
 }
+
+#let skillHighlight(content) = box(
+  width: auto,
+  height: auto,
+  baseline: 60%,
+  fill: none,
+  stroke: (paint: silver, thickness: 1pt),
+  radius: 3pt,
+  inset: 4pt,
+  outset: 0pt,
+  clip: false,
+  content
+)
