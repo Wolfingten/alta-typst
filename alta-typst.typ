@@ -125,6 +125,7 @@
   name: "",
   links: (),
   tagline: [],
+  pic: "",
   content,
 ) = {
   set document(
@@ -144,6 +145,7 @@
     }
 
     tagline
+    image(pic)
 
     if target() == "paged" {
       columns(

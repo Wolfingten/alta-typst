@@ -6,9 +6,10 @@
     (name: "email", link: "mailto:gurtler.jakob@gmail.com"),
     (name: "github", link: "https://github.com/Wolfingten", display: "@Wolfingten"),
     (name: "phone-solid", link: "", display: "015159889521"),
-    (name: "location", link: "", display: "Waldhasuweg 15 70-03-03, 66123 Saarbrücken"),
+    (name: "location", link: "", display: "Oeverseestraße 7, 203, 22769 Hamburg"),
   ),
   tagline: [M.Sc. Computerlinguistik],
+  pic: "../../pCloudDrive/Bewerbungen/bewerbungs_foto.jpg",
   [
     == Arbeitserfahrung
 
